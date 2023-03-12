@@ -115,6 +115,9 @@ input[type='radio']:checked + label h3 {
 	color: #000;
 	font-weight: 500;
 }
+input[type='radio']:active + label h3 {
+	color: #67788f;
+}
 
 @media screen and (min-width: 670px) {
 	input[type='radio']:checked + label .image {
@@ -183,8 +186,5 @@ input[type='radio']:checked + label h3 {
 		width: 1.5rem;
 		transition: 0.5s, ease-out 0.5s;
 		-webkit-transition: 0.5s, ease-out 0.5s;
-	}
-	input[type='radio']:active + label h3 {
-		color: #67788f;
 	}
 }
