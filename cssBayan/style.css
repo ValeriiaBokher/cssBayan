@@ -83,9 +83,6 @@ hr {
 	border-radius: 2rem;
 	box-shadow: 1rem 0.5rem 0.5rem #5e636e;
 }
-.main-block:hover h3 {
-	color: #000;
-}
 
 .image {
 	width: 0rem;
@@ -136,34 +133,11 @@ input[type='radio']:checked + label h3 {
 }
 
 @media screen and (min-width: 900px) {
-	.main-block:hover .x {
-		background-image: url('assets/close.png');
-		height: 1.5rem;
-		width: 1.5rem;
-		transition: 0.5s, ease-out 0.5s;
-		-webkit-transition: 0.5s, ease-out 0.5s;
-	}
-	input[type='radio']:active + label h3 {
-		color: #67788f;
-	}
 	input[type='radio']:active + label .image {
 		filter: alpha;
 		opacity: 0.25;
 		transition: 0.2s;
 		-webkit-transition: 0.2s;
-	}
-	.container:hover .x {
-		background-image: url('assets/open.png');
-		height: 1.5rem;
-		width: 1.5rem;
-		transition: 0.5s, ease-out 0.5s;
-		-webkit-transition: 0.5s, ease-out 0.5s;
-	}
-	.container:hover .image {
-		display: block;
-		transition: 2s;
-		-webkit-transition: 2s;
-		width: 20rem;
 	}
 
 	input[type='radio']:checked + label .image {
@@ -183,5 +157,34 @@ input[type='radio']:checked + label h3 {
 	.main-block {
 		max-width: 45rem;
 		padding: 1rem 2rem;
+	}
+}
+
+@media (hover: hover) {
+	.main-block:hover h3 {
+		color: #000;
+	}
+	.container:hover .x {
+		background-image: url('assets/open.png');
+		height: 1.5rem;
+		width: 1.5rem;
+		transition: 0.5s, ease-out 0.5s;
+		-webkit-transition: 0.5s, ease-out 0.5s;
+	}
+	.container:hover .image {
+		display: block;
+		transition: 2s;
+		-webkit-transition: 2s;
+		width: 20rem;
+	}
+	.main-block:hover .x {
+		background-image: url('assets/close.png');
+		height: 1.5rem;
+		width: 1.5rem;
+		transition: 0.5s, ease-out 0.5s;
+		-webkit-transition: 0.5s, ease-out 0.5s;
+	}
+	input[type='radio']:active + label h3 {
+		color: #67788f;
 	}
 }
