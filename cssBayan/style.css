@@ -59,13 +59,13 @@ h3 {
 	background-color: rgb(103, 120, 143);
 	background-repeat: no-repeat;
 	border-radius: 2rem;
-	width: 0rem;
-	height: 0rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 0 auto;
+	margin: 1.5rem auto 0 auto;
 	transition: 0.5s;
+	width: 0rem;
+	height: 0rem;
 	-webkit-transition: 0.5s;
 }
 hr {
@@ -119,6 +119,13 @@ input[type='radio']:active + label h3 {
 	color: #67788f;
 }
 
+input[type='radio']:active + label .image {
+	filter: alpha;
+	opacity: 0.25;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+}
+
 @media screen and (min-width: 670px) {
 	input[type='radio']:checked + label .image {
 		width: 15rem;
@@ -135,14 +142,7 @@ input[type='radio']:active + label h3 {
 	}
 }
 
-@media screen and (min-width: 900px) {
-	input[type='radio']:active + label .image {
-		filter: alpha;
-		opacity: 0.25;
-		transition: 0.2s;
-		-webkit-transition: 0.2s;
-	}
-
+@media screen and (min-width: 1200px) {
 	input[type='radio']:checked + label .image {
 		width: 20rem;
 	}
@@ -164,6 +164,13 @@ input[type='radio']:active + label h3 {
 }
 
 @media (hover: hover) {
+	.main-block:hover .x {
+		background-image: url('assets/close.png');
+		height: 1.5rem;
+		width: 1.5rem;
+		transition: 0.5s, ease-out 0.5s;
+		-webkit-transition: 0.5s, ease-out 0.5s;
+	}
 	.main-block:hover h3 {
 		color: #000;
 	}
@@ -171,6 +178,7 @@ input[type='radio']:active + label h3 {
 		background-image: url('assets/open.png');
 		height: 1.5rem;
 		width: 1.5rem;
+
 		transition: 0.5s, ease-out 0.5s;
 		-webkit-transition: 0.5s, ease-out 0.5s;
 	}
@@ -180,11 +188,27 @@ input[type='radio']:active + label h3 {
 		-webkit-transition: 2s;
 		width: 20rem;
 	}
-	.main-block:hover .x {
-		background-image: url('assets/close.png');
-		height: 1.5rem;
-		width: 1.5rem;
-		transition: 0.5s, ease-out 0.5s;
-		-webkit-transition: 0.5s, ease-out 0.5s;
+
+	@media screen and (max-width: 669px) {
+		.container:hover .image {
+			width: 10rem;
+		}
+		.container:hover .x {
+			margin: 1rem auto 0 auto;
+		}
+		.main-block:hover .x {
+			margin: 1rem auto 0 auto;
+		}
+	}
+	@media screen and (max-width: 1199px) {
+		.container:hover .image {
+			width: 15rem;
+		}
+		.container:hover .x {
+			margin: 1rem auto 0 auto;
+		}
+		.main-block:hover .x {
+			margin: 1rem auto 0 auto;
+		}
 	}
 }
